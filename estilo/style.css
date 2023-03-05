@@ -1,0 +1,181 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'titulos';
+  src: url(../Font/Comic\ Gecko\ Pro.otf) format('opentype');
+}
+
+:root {
+  --cor01: #6F04D9;
+  --cor02: #7207DE;
+  --cor03: #7D05F5;
+  --cor04: #7207DE;
+  --cor05: #8108FA;
+
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  text-align: center;
+  background-color: var(--cor01);
+  min-height: 150px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+header h1, p {
+  font-size: 3.5em;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%; /* definir a altura total da página */
+  background-color: #d9048e;
+
+}
+
+main{
+  min-width: 300px;
+  max-width: 1000px;
+  margin: auto;
+  /*margin-bottom: 30px;*/
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+  /*border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;*/
+  background-color: #6f04d9;
+  text-align: center;
+}
+
+.top {
+  font-size: 1.5em;
+  margin: 1px;
+  padding: 1px;
+}
+
+main p {
+  font-size: 1.5em;
+  margin: 5px;
+  padding: 1px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+}
+
+.flip-card {
+  background: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 100%;
+  margin-right: 20px;
+  margin-bottom: 8px;
+}
+
+.flip-card:nth-child(n+2) {
+  margin-top: 1px;
+}
+
+.flip-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+}
+
+.flip-card-front {
+  background-image: linear-gradient(45deg, #6f04d9, #d9048e);
+}
+
+.flip-card-front img {
+  width: 175px;
+  margin-top: 1rem;
+}
+
+.flip-card-back {
+  background-image: linear-gradient(315deg, #6f04d9, #8a045c);
+  color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+  width: 130px;
+  margin-top: 1rem;
+}
+
+.flip-card-back h3 {
+  margin-bottom: 0.3rem;
+}
+
+.flip-card-back h1 {
+  margin: 0;
+}
+
+footer{
+  background-color: var(--cor05);
+  color: white;
+  text-align: center;
+  font-size: 0.3em;
+  padding: 5px;
+}
+
+footer a{
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+  color: var(--cor01);
+}
+
+/*
+div.quadrado{
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: lightcyan;
+    width: 328px;
+    height: 330px; 
+  }
+  
+  div#PF1, #PF2, #PF3 {
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  div#PF1{
+    background-image: url('../Mangas/BleachRemix01.jpg');
+    background-size: cover;
+    background-color: rgb(83, 82, 82, 0.577);
+  } */
